@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coucou |
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<h1>{{title}}</h1>
+	<a href="/about">About</a>
+	<div>Traks
+		<ul>
+			{% for track in tracks %}
+				<li>
+					{{ track.song }}, from
+					{{ track['artist'] }}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

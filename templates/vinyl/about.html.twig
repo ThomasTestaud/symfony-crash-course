@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About |
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<h1>{{title}}</h1>
+	<a href="/">Home</a>
+
+	<p>This is the about page...</p>
+	<p>Nothing to see here for now!</p>
+
+	{% for element in table.first %}
+		<p>Hey
+			{{ element }}</p>
+	{% endfor %}
+
+	<p>The second element from the array is
+				"{{table.second}}"</p>
+
+{% endblock %}
